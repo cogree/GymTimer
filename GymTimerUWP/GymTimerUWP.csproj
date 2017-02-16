@@ -95,6 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Configure.xaml.cs">
+      <DependentUpon>Configure.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GymTimerConfig.cs" />
     <Compile Include="GymTimerState.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -123,6 +126,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Configure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
