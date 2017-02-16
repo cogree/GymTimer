@@ -12,10 +12,23 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Name="Message"  FontSize="120" Text="Desc" HorizontalAlignment="Center" Grid.Row="0" />
-        <TextBlock Name="TimeRemaining" FontSize="200" FontWeight="Bold" Text="TIME" HorizontalAlignment="Center" Grid.Row="1"/>
-        <TextBlock Name="Iteration"  FontSize="100" Text="Round: x of y" HorizontalAlignment="Center" Grid.Row="2" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="Message"  FontSize="100" Text="Desc" HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" />
+        <TextBlock Name="TimeRemaining" FontSize="200" FontWeight="Bold" Text="TIME" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock Name="Iteration"  FontSize="100" Text="Round: x of y" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2" />
+        <Button Name="Btn_StartStop" Grid.Row="3" Grid.Column="0" FontSize="40" Margin="10" Padding="5" HorizontalAlignment="center">
+            Start
+        </Button>
+        <Button Name="Btn_Configure" Grid.Row="3" Grid.Column="1" FontSize="40" Margin="10" Padding="5" HorizontalAlignment="center">
+            Configure
+        </Button>
     </Grid>
-    
+
+   
+
 </Page>

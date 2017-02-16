@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="GymTimerUWP.Configure"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GymTimerUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" MinWidth="125"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Text="Workout Time" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+        <TextBox Name="PageWorkoutTime" Grid.Row="0"  Grid.Column="1"/>
+
+
+        <TextBlock Text="Break Time" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+        <TextBox Name="PageBreakTime" Grid.Row="1" Grid.Column="1"/>
+
+        <TextBlock Text="Rounds" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+        <TextBox Name="PageNumberOfRounds" Grid.Row="2" Grid.Column="1"/>
+    </Grid>
+</Page>

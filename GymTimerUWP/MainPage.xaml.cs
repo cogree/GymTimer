@@ -28,6 +28,27 @@ namespace GymTimerUWP
             InitTimer();         
         }
 
+        public void Bind()
+        {
+            this.Btn_Configure.Click += (o, e) =>
+            {
+
+            };
+            this.Btn_StartStop.Click += (o, e) =>
+            {
+                if(_state.Running)
+                {
+                    _state.Stop();
+                    Btn_StartStop.Content = "Start";
+                }
+                else
+                {
+                    _state.Start();
+                    Btn_StartStop.Content = "Pause";
+                }
+            };
+        }
+
         private void InitTimer()
         {
             _config = new GymTimerConfig();

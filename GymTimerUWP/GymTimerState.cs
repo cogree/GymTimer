@@ -12,11 +12,11 @@ namespace GymTimerUWP
         public Color TimerColor { get; private set; }
         public TimerStateEnum TimerState { get; private set; }
         public int Iteration { get; private set; }
-        private bool _started;
+        public bool Running { get; private set; }
 
         public void Reset(GymTimerConfig config)
         {
-            _started = false;
+            Running = false;
             TimerState = TimerStateEnum.GET_READY;
             Iteration = 1;
             TimerColor = config.InitialBufferTimeColor;
@@ -26,12 +26,17 @@ namespace GymTimerUWP
 
         public void Start()
         {
-            _started = true;
+            Running = true;
+        }
+
+        public void Stop()
+        {
+            Running = false;
         }
 
         public void State_Tick(GymTimerConfig config)
         {
-            if (!_started)
+            if (!Running)
                 return;
 
             TimerElapsed += TimerTickSpan;
@@ -72,7 +77,7 @@ namespace GymTimerUWP
                     TimerState = TimerStateEnum.END;
                     TimerTimeSpan = TimeSpan.Zero;
                     TimerColor = config.WorkoutOverTimeColor;
-                    _started = false;
+                    this.Stop();
                 }
             }
         }
